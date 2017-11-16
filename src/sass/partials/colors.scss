@@ -1,7 +1,7 @@
 //======= COLORS =========
 
 $color--no-picture: #D8D8D8;
-$color--info-widget: #F7F7F7;
+$color--widget-bg: #F7F7F7;
 $color--primary: #0076B6;
 $color--headings: #064085;
 $color--body-text: #393A3C;
@@ -12,7 +12,11 @@ $color--text-light: #ffffff;
 
 $padding: 16px;
 
-@mixin heading-h1 {
-  font-size: $padding * 2;
-  font-weight: 300;
+
+
+@mixin interactive-primary {
+
+}
+@mixin interactive-primary--hover {
+
 }

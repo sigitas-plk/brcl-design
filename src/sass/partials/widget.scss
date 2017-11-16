@@ -1,11 +1,11 @@
 @import 'colors';
+@import 'util';
 
 $padding: 16px;
 $line-height: $padding;
 
 .widget-container {
-  padding: $padding;
- // display: flex;
+  background-color: $color--widget-bg;
 }
 
 .widget-img {
@@ -14,23 +14,50 @@ $line-height: $padding;
 }
 
 .widget-header {
-  margin: $padding $padding 0 $padding;
+  margin: $padding $padding*2;
   * {
-    @include heading-h1;
-    color: $color--headings;
+    @include heading;
     margin: 0;
     font-size: 32px;
   }
 }
 
 .widget-body {
+  height: 100px; //static to avoid using flexbox here
+  padding: 0 $padding;
   & * {
     margin: $padding;
     padding: 0;
     line-height: $line-height;
   }
+
 }
 
-.widget-cta{
-  align-self: flex-end;
+.widget-cta {
+  padding: 0 $padding *2 $padding*1.5 $padding *2;
+  & > button {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($color--no-picture, 5%);
+    }
+    &.primary {
+      background-color: $color--primary;
+      color: $color--text-light;
+      &:hover{
+        background-color: lighten($color--primary, 15%);
+      }
+    }
+    &.secondary {
+       background-color: $color--text-light;
+      border: 1px $color--primary solid;
+      color: $color--primary;
+      &:hover {
+        background-color: lighten($color--primary,60%);
+        border-color: lighten($color--primary, 20%);
+      }
+    }
+  }
 }
