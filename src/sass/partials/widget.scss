@@ -1,0 +1,36 @@
+@import 'colors';
+
+$padding: 16px;
+$line-height: $padding;
+
+.widget-container {
+  padding: $padding;
+ // display: flex;
+}
+
+.widget-img {
+  background-color: $color--no-picture;
+  height: 200px;
+}
+
+.widget-header {
+  margin: $padding $padding 0 $padding;
+  * {
+    @include heading-h1;
+    color: $color--headings;
+    margin: 0;
+    font-size: 32px;
+  }
+}
+
+.widget-body {
+  & * {
+    margin: $padding;
+    padding: 0;
+    line-height: $line-height;
+  }
+}
+
+.widget-cta{
+  align-self: flex-end;
+}
